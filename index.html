@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kitty's Cozy Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <main class="dashboard">
+        <header class="welcome">
+            <div>
+                <p class="eyebrow">🐾 YOUR LITTLE HAPPY PLACE</p>
+                <h1 id="greeting">Hello, Kitty Lover! 💗</h1>
+                <div class="name-settings">
+    <input
+        type="text"
+        id="name-input"
+        placeholder="Enter your name..."
+    >
+    <button id="save-name">Save Name 💕</button>
+</div>
+                <p class="subtitle">Let's make today a little more pawsome.</p>
+            </div>
+            <div class="cat-buddy" aria-label="Cute cat">🐱</div>
+            <button id="theme-toggle" type="button">
+    🌙 Dark Mode
+</button>
+        </header>
+
+        <section class="overview">
+            <article class="card date-card">
+                <span class="card-icon">🌷</span>
+                <h2>Today's Date</h2>
+                <p id="date">Loading date...</p>
+            </article>
+
+            <article class="card clock-card">
+                <span class="card-icon">⏰</span>
+                <h2>Current Time</h2>
+                <p id="clock">00:00:00</p>
+            </article>
+
+            <article class="card mood-card">
+                <span class="card-icon">🍮</span>
+                <h2>Daily Reminder</h2>
+                <p>Take a breath. You're doing great!</p>
+            </article>
+        </section>
+
+        <section class="card todo-card">
+            <section class="card timer-card">
+    <span class="card-icon">🍅</span>
+    <h2>Cozy Focus Timer</h2>
+    <p>Time to focus, little kitty!</p>
+
+    <div id="timer-display">25:00</div>
+    <div class="timer-settings">
+    <label for="timer-minutes">Focus duration (minutes):</label>
+    <input
+        type="number"
+        id="timer-minutes"
+        min="1"
+        max="180"
+        value="25"
+    >
+    <button id="set-timer">Set Time ⚙️</button>
+</div>
+
+    <div class="timer-buttons">
+        <button id="start-timer">Start ▶️</button>
+        <button id="pause-timer">Pause ⏸️</button>
+        <button id="reset-timer">Reset ↻</button>
+    </div>
+</section>
+            <h2>🐾 My To-Do List</h2>
+            <p>Your little steps matter!</p>
+            <div class="todo-form">
+                <input id="todo-input" type="text"
+                    placeholder="Add a tiny task...">
+                <button id="add-todo">Add Task +</button>
+            </div>
+            <ul id="todo-list"></ul>
+        </section>
+<section class="card links-card">
+    <h2>🔗 My Quick Links</h2>
+    <p>Your favorite places, just one click away!</p>
+
+    <div class="links-form">
+        <input id="link-name" type="text"
+            placeholder="Link name (e.g. Google)">
+
+        <input id="link-url" type="url"
+            placeholder="Website URL (e.g. https://google.com)">
+
+        <button id="add-link">Add Link +</button>
+    </div>
+
+    <ul id="links-list"></ul>
+</section>
+        <footer>
+            Made with love and little paws ♡
+        </footer>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

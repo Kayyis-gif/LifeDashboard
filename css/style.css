@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --cream: #fffaf2;
+    --pink: #ffe0eb;
+    --pink-dark: #d979a0;
+    --yellow: #fff0b8;
+    --mint: #dff5e8;
+    --lavender: #eee5ff;
+    --brown: #70504c;
+    --text: #655657;
+    --white: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    padding: 32px 18px;
+    font-family: 'Nunito', sans-serif;
+    background:
+        radial-gradient(circle at 10% 10%, #ffe9f1 0, transparent 25%),
+        radial-gradient(circle at 90% 90%, #e4f5e9 0, transparent 28%),
+        var(--cream);
+    color: var(--text);
+}
+
+.dashboard {
+    width: min(100%, 1000px);
+    margin: 0 auto;
+}
+
+.welcome {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 30px;
+    background: var(--white);
+    border: 2px solid #f8e7e8;
+    border-radius: 28px;
+    box-shadow: 0 8px 25px #70504c12;
+}
+
+.eyebrow {
+    color: var(--pink-dark);
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+h1 {
+    margin: 8px 0;
+    color: var(--brown);
+    font-size: clamp(1.6rem, 4vw, 2.5rem);
+}
+
+.subtitle {
+    margin-bottom: 0;
+}
+
+.cat-buddy {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    width: 110px;
+    height: 110px;
+    background: var(--pink);
+    border-radius: 35px;
+    font-size: 4rem;
+    transform: rotate(3deg);
+}
+
+.overview {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    margin: 24px 0;
+}
+
+.card {
+    padding: 24px;
+    border-radius: 24px;
+    box-shadow: 0 6px 20px #70504c0c;
+}
+
+.date-card {
+    background: var(--yellow);
+}
+
+.clock-card {
+    background: var(--mint);
+}
+
+.mood-card {
+    background: var(--lavender);
+}
+
+.card-icon {
+    font-size: 1.8rem;
+}
+
+.card h2 {
+    margin: 12px 0 8px;
+    color: var(--brown);
+    font-size: 1.1rem;
+}
+
+.card p {
+    overflow-wrap: anywhere;
+    line-height: 1.6;
+}
+
+.todo-card {
+    background: var(--white);
+    border: 2px solid #f8e7e8;
+}
+
+.todo-card > p {
+    margin-bottom: 20px;
+}
+
+.todo-form {
+    display: flex;
+    gap: 10px;
+}
+
+.todo-form input {
+    flex: 1;
+    min-width: 0;
+    padding: 13px 16px;
+    border: 2px solid #f2e3e6;
+    border-radius: 14px;
+    outline: none;
+}
+
+.todo-form input:focus {
+    border-color: var(--pink-dark);
+}
+
+button {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 14px;
+    background: var(--pink);
+    color: var(--brown);
+    font-weight: 800;
+}
+
+button:hover {
+    background: #ffcadd;
+}
+
+#todo-list {
+    padding-left: 24px;
+}
+
+#todo-list li {
+    margin: 12px 0;
+    overflow-wrap: anywhere;
+}
+
+footer {
+    padding: 25px 0 5px;
+    color: #a68c8a;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 650px) {
+    body {
+        padding: 18px 12px;
+    }
+
+    .welcome {
+        padding: 22px;
+    }
+
+    .cat-buddy {
+        width: 75px;
+        height: 75px;
+        border-radius: 24px;
+        font-size: 2.8rem;
+    }
+
+    .overview {
+        grid-template-columns: 1fr;
+    }
+
+    .todo-form {
+        flex-direction: column;
+    }
+}
+/* Dark Mode */
+body.dark-mode {
+    --cream: #252333;
+    --pink: #513849;
+    --pink-dark: #f2a6c5;
+    --yellow: #51482f;
+    --mint: #29483d;
+    --lavender: #403651;
+    --brown: #fff0f5;
+    --text: #f5eaf0;
+    --white: #302d40;
+
+    background: #252333;
+    color: var(--text);
+}
+
+body.dark-mode .welcome,
+body.dark-mode .todo-card {
+    border-color: #494156;
+}
+
+body.dark-mode .todo-form input {
+    background: #403b50;
+    color: white;
+    border-color: #62556c;
+}
+
+body.dark-mode button {
+    color: white;
+}
