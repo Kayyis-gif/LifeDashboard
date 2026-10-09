@@ -279,11 +279,22 @@ const saveNameButton = document.getElementById("save-name");
 let savedName = localStorage.getItem("userName") || "";
 
 function updateGreeting() {
-    if (savedName) {
-        greeting.textContent = "Hello, " + savedName + "! 💗";
-    } else {
-        greeting.textContent = "Hello, Kitty Lover! 💗";
-    }
+  const hour = new Date().getHours();
+  let timeGreeting;
+
+  if (hour < 12) {
+    timeGreeting = "Good morning";
+  } else if (hour < 18) {
+    timeGreeting = "Good afternoon";
+  } else {
+    timeGreeting = "Good evening";
+  }
+
+  if (savedName) {
+    greeting.textContent = ${timeGreeting}, ${savedName}!;
+  } else {
+    greeting.textContent = ${timeGreeting}, Kitty Lover!;
+  }
 }
 
 saveNameButton.addEventListener("click", function () {
