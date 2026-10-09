@@ -291,9 +291,9 @@ function updateGreeting() {
   }
 
   if (savedName) {
-    greeting.textContent = ${timeGreeting}, ${savedName}!;
+    greeting.textContent = `${timeGreeting}, ${savedName}!`;
   } else {
-    greeting.textContent = ${timeGreeting}, Kitty Lover!;
+    greeting.textContent = `${timeGreeting}, Kitty Lover!`;
   }
 }
 
